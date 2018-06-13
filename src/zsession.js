@@ -548,6 +548,7 @@ Zmodem.Session.Receive = class ZmodemReceiveSession extends Zmodem.Session {
                 return;
             }
             else {
+                this._on_session_end();
                 throw( "PROTOCOL: Only thing after ZFIN should be “OO” (79,79), not: " + this._input_buffer.join() );
             }
         }
